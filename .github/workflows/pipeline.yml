@@ -36,13 +36,3 @@ jobs:
       - name: SonarQube Analysis
         run: |
           mvn sonar:sonar -Dsonar.host.url=$SONAR_URL
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Approve Deployment
-        run: |
-          echo "Deploying into Server"
-        when: always()
