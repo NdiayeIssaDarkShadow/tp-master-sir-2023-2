@@ -32,7 +32,4 @@ jobs:
       - name: Build
         run: |
           mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install
-
-      - name: SonarQube Analysis
-        run: |
           mvn sonar:sonar -Dsonar.host.url=http://172.22.224.1:9000
