@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      SONAR_URL: http://172.22.224.1:9000  # Définissez votre URL SonarQube ici
+      SONAR_URL: http://172.22.224.1:9000 
 
     steps:
       - name: Checkout code
@@ -35,4 +35,4 @@ jobs:
 
       - name: SonarQube Analysis
         run: |
-          mvn sonar:sonar -Dsonar.host.url=$SONAR_URL
+          mvn sonar:sonar -Dsonar.host.url=http://172.22.224.1:9000
